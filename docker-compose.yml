@@ -1,0 +1,15 @@
+services:
+  # POSTGRES CONFIGURATION
+  db:
+    # The docker image of postgres -- using latest
+    image: postgres:latest
+    # The ports to expose to the host container
+    # 5432 is the default PostgreSQL port
+    ports:
+      - "5432:5432"
+
+    restart: always
+
+    # postgres configuration specifically
+    environment:
+      POSTGRES_PASSWORD: changemeinprod
